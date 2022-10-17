@@ -1,0 +1,33 @@
+public with sharing class CommentingOnCodeExercise {
+
+    /**
+     * Your Assignment is to add comments describing what is being done in the methods below.
+     * Call out the concepts you learned in your readings and in class.
+     */
+
+    public static void cartValues() {
+		//In the step below, the integer variable is being defined as "minimumCartValue" and the value for that minimum value is being set to 50.
+        Integer minimumCartValue = 50;
+		//In the step below, another integer, itemA, is being set and with a value of 10. 
+        Integer itemA = 10;
+        //In the step below, another integer, itemB, is being set and with a value of 20. 
+        Integer itemB = 20;
+        //In the step below, another integer, itemC, is being set and with a value of 45. 
+        Integer itemC = 45;
+		//In the step below, another integer, cartValue, is being set to equal the value of itemA and itemB combined. 
+        Integer cartValue = itemA + itemB;
+		//In the step below, the code is looking for a true/false value to see if the integer cartValue is greater or equal to the minimumCartValue integer. 
+        Boolean cartMinimumMet = cartValue >= minimumCartValue;
+		//In the step below, the code is printing out the variable to debug and test the cartMinimumMet variable
+        System.debug('Have we reached the minimum: ' + cartMinimumMet);
+		//In the step below, the code is changing the value of the integer cartValue to also inclue itemC in addition to itemA and itemB as noted above. Should this line start with "Integer?"
+        cartValue = cartValue + itemC;
+		//In the step below, the code is checking to see if the cartValue integer is greater or equal to the minimumCartValue. Should this code start with "Boolean" to note it is looking for true/false?
+        cartMinimumMet = cartValue >= minimumCartValue;
+		//In the step below, the code is printing out the variable to debug and test the cartMinimumMet variable again
+        System.debug('How about now? : ' + cartMinimumMet);
+
+    }
+
+
+}
