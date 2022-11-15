@@ -1,0 +1,81 @@
+public with sharing class WeekSixHomework {
+    // Remember Sets & Maps??  We did a little practice with Lists in week 2, but we need to make sure we know how to use Sets & Maps as well!!
+	
+    public static void setsReview(){
+
+        //Your assignment: Play with Sets!
+
+        // 1.  Create a set of Strings and add at least 5 entries
+        Set<String> favoriteColors = new Set<String>{'Black', 'Red', 'Green', 'Blue', 'Gray'};
+
+        //Use System.debug to print out the size of your set
+		system.debug('My Favorite Colors List: ' + favoriteColors.size());
+
+        //Add an item to your set that already exists
+        favoriteColors.add('Blue');
+		system.debug('My Favorite Colors List: ' + favoriteColors.size());
+
+        //Use System.debug to print out the size again,  they should be the same!
+
+
+
+        // 2.  Bonus Points!  Check out the documentation on Sets. Go to the section titled Set Methods. Pick one of the methods to try out and print the results to the debug log.  
+        // Documentation: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_set.htm
+        //Hint:  can you print out a boolean that indicates if the set is empty?  Can you clone it?
+        Set<String> favoriteColors = new Set<String>clone();
+
+    }
+
+    public static void mapsReview () {
+
+        //Time to get creative!  
+
+        // 1. Create a new Map.  You can use whatever primitives/object types you like, as long as they make sense.
+        // Try to add at least 5 Key/value pairs.
+		Map<Integer, String> colorsByRank = new Map<Integer, String>();
+
+        //Let's add some entries in the format of: map.put(key, value)
+        colorsByRank.put(1, 'Black');
+        colorsByRank.put(2, 'Red');
+        colorsByRank.put(3, 'Green');
+        colorsByRank.put(4, 'Blue');
+        colorsByRank.put(5, 'Gray');
+
+
+        //Now, in the debug log, print out  a list of the values.
+		system.debug('My Favorite Colors List By Rank: ' + colorsByRank);
+
+        //Can you print out a set of the Keys?
+        Set<Integer> mapKeysSet = colorsByRank.keySet();
+        System.debug('The KeySet of My Favorite Colors by Rank: ' + colorsByRank.keySet());
+        
+ 
+        // 2. Bonus!  Check out the documentation on Maps. Go to the section titled Map Methods.  Manipulate the Map using one of the methods defined in the documentation
+        // Documentation: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_map.htm
+        // Hint: Can you remove an entry using the key?  Can you clear out the map without deleting it?
+
+		System.debug('The KeySet of My Favorite Colors by Rank: ' + colorsByRank.clear())
+    }
+
+    public static void listsReview() {
+
+        // 1. Create a list of Strings.  Add at least 5 entries to the list, all in one line
+		 Set<String> favoriteDogs = new Set<String>{'German Shepherd', 'Lab', 'Golden Retriever', 'Jack Russel', 'Poodle'};
+
+        // 2. Create a second list of Strings and add 5 or more entries to this list.
+		 Set<String> favoriteMusicals = new Set<String>{'West Side Story', 'Mary Poppins', 'Wicked', 'Hamilton', 'Oklahoma'};
+
+        //3.  Bonus! Using the documentation on standard List methods from Salesforce, add the items from your first list, to your second list with one command
+        // Documentation: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_list.htm
+        favoriteMusicals.addAll(Set from favoriteDogs);
+        System.debug('My Lists Combined: ' + favoriteMusicals);
+
+
+        //4.  Can you now loop through your combined list and print it to the debug log?  (Hint:  Check the documentation!)
+		for (String favoriteMusicals: combinedList)
+            String combinedList = favoriteMusicals
+    }
+        
+}
+
+ 
